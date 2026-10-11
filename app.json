@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Grocery Check Assistant",
+    "slug": "grocery-check-assistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.grocerycheck.assistant",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Grocery Check Assistant uses the camera to scan product barcodes.",
+        "NSPhotoLibraryUsageDescription": "This app uses your photo library when you choose a medicine label image.",
+        "NSMicrophoneUsageDescription": "Grocery Check Assistant uses the microphone to record shopping reminders."
+      }
+    },
+    "android": {
+      "package": "com.grocerycheck.assistant",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow Grocery Check Assistant to record voice reminders."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": false
+          },
+          "android": {
+            "newArchEnabled": false
+          }
+        }
+      ],
+      "expo-status-bar"
+    ]
+  }
+}
